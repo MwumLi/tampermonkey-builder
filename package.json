@@ -1,0 +1,25 @@
+{
+  "name": "tampermonkey-builder",
+  "version": "0.1.0",
+  "description": "基于 rollip 的油猴脚本开发工具",
+  "main": "index.js",
+  "scripts": {
+    "file": "node ./scripts/generate-local-dev-script.js",
+    "rmdist": "rm -rf dist",
+    "predev": "npm run rmdist",
+    "dev": "rollup -c --watch",
+    "prebuild": "npm run rmdist",
+    "build": "NODE_ENV=production rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:MwumLi/tampermonkey-builder.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "rollup": "^3.1.0"
+  },
+  "engines": { "node": ">=16.13.0" }
+}
